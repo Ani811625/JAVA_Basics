@@ -1,0 +1,58 @@
+BASIC TERMINOLOGIES:
+
+ Programming:Giving set of instructions to the computer to perform some task is called Programming.
+ Data Structures:Mathematical and logical model of organizing interrelated data.
+ Algorithms:Step by step solution to solve a computational problem is called Algorithm.
+
+Applications of Programming:
+    i.Computer can only perform task when instructions are provided.But it only understands binary language i.e 0 & 1
+      But for us as humans providing instructions in binary is very tedious task.So we use high level language.
+
+ High level language like JAVA,C++ etc are somewhat like english .We as humans write instructions for the computer in this language.But our computer still only understands low level language or binary language.
+ Here comes Translator.
+
+ A Translator translates high level language into low level or machine level language.
+ Translator is of 2 types:
+    i.Compiler:It translates the whole programme and executes it at once.During compilation syntax of the programme is also checked.
+    ii.Interpreter:A interpreter interprets the programme line by line and execute one line at a time.It is slower as compared to compiler.
+
+
+
+Programming paradigms:
+
+    To understand what is paradigms first let us understand a example.
+    Suppose few students are given some paragraph to write.Now there are different handwriting's like Print,Cursive,Pre-Cursive.Among all these types of handwriting a student can write in any handwriting.
+Similarly for solving a programme or problem there are various methods.
+There are basically 3 programming paradigms:
+    i.Procedural Oriented Programming:Here programme is written with the help of procedures.This procedures are nothing but functions.Example-C,Basic etc.
+    ii.Functional Oriented Programming:It is nothing but programmes consists of pure functions.
+            Functions:Reusable chunk of code performing some specific task.
+            Pure functions:Functions that follow two characteristics-First,The functions follow strict control flow(meaning for same input ,output is always same),Second This functions should not change the value of any external factors or variables.
+        Example-Javascript,Python
+    iii.Object Oriented Programming:Here the programme is written in the form of classes and object such that class is the blue print or prototype of an object and object is the instance of a class.Example-C++,JAVA
+        Functions that objects of a class can perform are called methods,and features of objects of a class are called attributes.
+It is not necessary that one programming language will follow only one programming paradigm.
+
+Java source code has extension ".java" Now in case of other languages this source code is directly compiled by compiler into machine code with extension ".exe"This machine code is run on machine and desired task is performed.
+But in case of Java something else occurs.In case of Java the source code is first compiled and a byte code is generated.This byte code is neither high level code nor machine level code but is a intermediate.It has a extension of ".class"
+This byte code is interpreted by interpreter and machine code is formed with extension ".exe"
+
+The byte code formed can be run on any machine having JVM(JAVA Virtual Machine).This JVM is responsible for running Java programmes.Because of this feature java is also called portable language.Java is also called platform independent because once the programme is compiled in any OS,it
+can be run on any OS .Hence JAVA is also called Compile once run everywhere language.JVM is platform independent.Any machine with
+JVM can run the byte code and get the result.No source code is required every time.Once programme is compiled and byte code is formed ,this byte code if shared to different machines they can also run the code if JVM is already installed.
+
+This JVM consists of 3 parts:
+    i.Class loader-Responsible for loading byte code into main memory
+    ii.Memory Area-Every programme during execution requires some memory.This memory is allocated here.
+    iii.Execution Engine:It further consists of 3 parts-
+                         a.Interpreter-Interprets the byte code into machine code.
+                         b.JIT Compiler(JIT-Just In Time)-It optimises the performance of the interpreter.For repeated task the JIT compiler prevents interpreter for interpreting same code because of its slow speed and compiles the repeated code at once and gives it to the interpreter.
+                         c.Garbage Collector-Automatically deallocates and dereferences memory.
+
+This JVM is contained within JRE(JAVA RUNTIME ENVIRONMENT),which consists of the JVM along with the java libraries.
+
+This JRE is further present within JDK(JAVA DEVELOPMENT KIT),which consists of the JRE along with java compiler(javac),javadoc(for generating java documents) and other tools.
+
+So when we install JDK in our machine everything including JVM,JRE,JAVA compiler and other tools get installed together.
+
+**Machine code is machine dependent.It depends upon the computer architecture and memory layout.

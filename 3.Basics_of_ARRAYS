@@ -1,0 +1,83 @@
+Arrays are marked as the beginning of data structures in JAVA.
+
+To understand arrays let us take a example.Suppose I need to store the age of a person.Then I will create a integer type variable to store the
+age of the person.But now suppose I need to store age of 3000 people.Then what will I do? Will I create 3000 variables and assign them values separately?
+
+Obviously not .Here comes the role of arrays.
+
+Arrays are nothing but collections of similar data types.Like I can create a array of 3000 integers such that it will store all the 3000 values.
+Array has 0 based index and contiguous memory allocation.
+
+There can be integer array,string array,float array etc..
+
+0 based index means that in array elements are numbered from 0 onwards(where 0,1 etc. specifies the position of the array element).
+
+Array is declared as:
+        int [] arr;//Here [] represent array,int means the data type of the elements that the array can store and arr is the name of the array.
+
+        Now here we can see that no size of array is declared and without size how will contiguous memory be allocated for the array.
+        So for that purpose we do:
+                int [] arr=new int[5];//Here 'new' keyword is used for allocating memory for the array.The number 5 denotes the size of the array.
+When size of array is mentioned then memory is allocated for the array.We know in JAVA an integer takes 4 bytes memory.Now here a array of 5 integers is declared.
+This means that the array will require a memory space of 5*4=20 bytes.
+
+This memory will be continuous means that if address of first byte is 101(generally addresses are in hexadecimal),then first element of array that occupies 4 bytes will occupy
+memory till address 104.
+Therefore:
+        Address of 1st element->101-104
+        Address of 2nd element->105-108
+        Address of 3rd element->109-112 etc...
+
+The name of the array itself is a pointer storing the address of the first element of the array.
+But what is the address of the first element?-->From above addresses we can see 1st element occupies addresses from 101-104 .Among this 4 addresses the first address 101 will
+be the address of the 1st element of the array.Similarly address of 2nd element is 105 and that of 3rd element is 109.
+
+Now let us see to declare values in an array:
+                Suppose ,int [] arr=new int[3];
+
+                Then to declare values of array:
+                        arr[0]=10;
+                        arr[1]=20;
+                        arr[2]=30;
+                Declaration of array elements are done from 0 onwards because we know array indexing starts from 0.
+There is another way of assigning values to an array called memory literal:
+        int [] arr={1,2,3};
+        automatically size of array becomes 3.
+
+Memory Allocation:
+Basically there are two types of memory->Stack memory and heap memory
+
+All the primitive data types,reference variables,functions get their memory in stack whereas objects get memory in heap.
+When we declare a array like:int [] arr;Memory in stack is declared where null is stored.The name of the location is set as the array name like here arr.
+Now when we declare the size of the array like:new int[5];Here array becomes an object or specifically new keyword allocates memory in heap such that after this declaration a
+memory block of size 5 is declared in heap and the starting address is stored in the array name replacing the null value..Hence the array name is also called reference variable as
+it stores a reference of the address of the array in heap.
+
+
+Types of array:
+    1.Single dimensional array
+    2.Multi dimensional array
+
+The array we are discussing till now is single dimensional array as it only contains a single array containing elements inside it.
+                    [1,2,3,4,5]
+
+A multidimensional array is also called array of arrays.This is because in case of multidimensional array there is outer pr main array like single dimensional.
+But the only difference is unlike single dimension which contains elements inside the array,multi dimension contains arrays as elements inside array.
+                    [[1,2],[3,4],[5,6]]
+
+Among all multidimensional array we will mostly discuss about 2-D array.
+It is declared as:
+                int [][] arr_2d=new int[3][2];//This means that an outer or main array that contains 3 elements or here we can say 3 arrays are created.And each of the 3 arrays further contains 2 elements each.
+Memory occupied by the 2D array:Total no.of elements->3*2=6
+                                Memory occupied by 1 element->4 bytes.
+                                So,Total memory occupied->6*4=24 bytes
+
+Array Traversal:
+Array can be traversed in 3 ways-
+                1.For loop
+                2.While loop
+                3.For each->It has a limitation wrt to other methods such that in for and while loop we can put limits such not traversing the
+                            whole array but upto a limit but here in case of for each we don't have that option.Here we have to traverse the whole array.
+
+We can directly find the length of an array using (.length ).
+If array name is arr then in order to calculate its length we will use arr.length

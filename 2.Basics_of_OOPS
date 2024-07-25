@@ -1,0 +1,103 @@
+OOPS stands for object oriented programming.
+Among the three programming paradigms ,JAVA follows object oriented programming paradigm which means that every programme in java involves objects and classes.
+
+Class is the blueprint/template/prototype of an object.
+Objects are nothing but real world entities which are instances of a class.
+
+Example->Suppose I need to design a car racing game.The first thing that I need to design is cars like BMW,Toyota,Sedan etc. Now what I can do is
+instead of creating all the similar properties of cars separately for different cars,I can create a class 'car' which will act as a template consisting all the basic features of a car,
+like model no.,year of manufacture,color etc.Now whenever I want to create a new car like hatchback which is nothing but a real entity(here object) I will define it or
+instantiate it under the car class such that the new object will automatically get all the basic features.Afterwards extra specific properties will be updated for each object.
+
+Now considering the above example,we know every car has some specific information's like model no.,year of manufacture,color etc.These are called attributes of an object .
+Beside this every object will also perform some functions like steer,acceleration etc.These are called the methods of object of an class.
+
+Now a class is defined as ->  Access_modifier 'class'keyword 'class Name'{class body}
+
+Access modifiers are nothing but used to explain the accessibility of the class means that who can access the class.There are 4 access modifiers:
+Public,Private,Protected and default
+
+Public is also used if we observe in the basic java programme structure .It is used so that the JVM can easily access the class.
+Now suppose a class car is created:
+public class Car{}
+
+Now to create an object of a class ,we write:
+                               'class Name' 'object name'='new'Keyword 'class name'();
+Here 'new' is a keyword that is used to allocate memory for the created object of the class.
+class name() is the default constructor.
+
+So suppose I want to create a object Toyota for class car ,it would be as:
+                                               Car Toyota=new Car();
+
+
+ Every object of a class has 3 parameters:
+        1.Identity->Name of the object(like Toyota)
+        2.State->Attributes of the objects(like model,color)
+        3.Behaviour->Methods of an object(like acceleration,steer)
+
+ ***In a JAVA programme there can be only one public class and name of the class will be the file name.(This is because JVM always interprets the public class).
+ For other classes there will be no access modifiers used.If for a class there is no access modifier used then it means that the class has default access modifier.***
+
+
+ In order to access the attributes of a class by an object we use '.'(dot) operator.
+
+
+
+ Example:
+        class Car{//Defining class car
+            //Attributes of class Car
+            int model;
+            int manufacture_year;
+            String color;
+            public void acceleration(){//Method
+                System.out.println(" ");
+            }
+         }
+         public class **File Name**{
+            public static void main(String [] args){
+                Car Alto=new Car();//Creating object Alto of class Car
+                Alto.model=123;//Updating the attribute model for object Alto.**This does not update the attribute for all other objects but only for object Alto
+                System.out.println("The model of Alto Car is:"+Alto.model);//Output->The model of Alto Car is:123
+                //If we do not assign any value to an attribute of an class and try to print the values for an object ,then default value is assigned to the attributes like 'int' is assigned 0,'String is assigned Null
+             }
+         }
+
+
+Methods:
+In classes some behaviour of objects are defined ,those are known as methods.Like in the above example acceleration is a method.
+In a method public word defines that any object of the class can access it(access modifier).If we look at the main structure of Java then we will se that
+inside of the class 'File Name', a method of name main is defined.In this main method the return type is 'void' meaning that the method does not
+return any value.Static means that this method can be accessed without any creation of object.This is what we actually see that no object of
+class 'File name ' is created but then also we can use it's method.
+
+A basic difference between function and method is that a function can be accessed without creating any object but accessing method requires creation of at least one object if static keyword is not mentioned while defining the method.
+Similar to attributes,methods are also accessed using '.'(dot) operator.
+
+Methods are defined as:
+            'Access modifier' return_type 'method name'(parameters){method body}
+            Ex-> public int add(int a,int b){
+                    int c=a+b;
+                    return c;//Since return type is int so method will return an integer variable.
+            }
+
+Method header->Access_modifier+return_type+method_name+parameters
+Method body->anything and everything written in between curly brackets{}
+Method signature->Method_name+parameters
+
+
+Packages:
+Packages are nothing but collections of classes,subpackages.
+Like we import java.util at the start of a programme .Here java.util is a package.
+                import java.util.Scanner->java.util is a package and Scanner is a particular class in that package.
+         If we write import java.util.*->Then it imports all classes within java.util package
+We can also make our own packages and import them in programmes.
+
+Constructor:
+Object of a class is created as-> 'Class Name' 'object name'=new 'class constructor'
+                             Ex-> Car Toyota=new Car();
+                             Here Car() is the default constructor.
+A constructor is the special method that is used to initialize object of a class.It is automatically defined when a class is created.
+Constructor is always the name of the class followed by ()
+
+We can create our own constructor manually.There are different types of constructors like default,parameterized,copy etc.
+***A constructor is a type of method that does not have any return type.***
